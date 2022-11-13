@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Patients Details</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    background: rgb(99, 99,90)
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+</style>
+</head>
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <section class="ftco-section">
+                
+            <div class="container">
+                <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="home.html">HelpNow</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span> Menu
+                  </button>
+                  <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="doctor-profile.html" class="nav-link">Doctor</a></li>
+                                <li class="nav-item"><a href="patient-profile.html" class="nav-link">Profile</a></li>
+                        
+                        
+                    </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        <!-- END nav -->
+      </div>
+    
+        </section>
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                    <span id="patientId" class="text-black-50">#1111</span>
+                    <span id="usernameSpanId" class="font-weight-bold">HackPrinceton</span>
+                    <span id="emailSpanId" class="text-black-50">HackPrinceton@gmail.com</span>
+                    <span id="totalcase" class="text-black-50"> Solved: 10 | Requested: 15</span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="d-flex justify-content-end mt-2">
+                    <input id="settings" type="image" src="https://img.icons8.com/ios-filled/512/gear.png" height="50px" width="50px" ></input>
+                </div>   
+                <div id="userDetails" class="p-3 py-5" >
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                         </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="labels">First Name</label><input id="p_name" type="text" class="form-control" placeholder="first name" value=""></div>
+                        <div class="col-md-6"><label class="labels">Last Name</label><input id="p_username" type="text" class="form-control" placeholder="last name" value=""></div>
+                        
+                    </div>
+                    
+                    <div  class="row mt-3">
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="height" value=""></div>
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="weight" value=""></div>
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="sex" value=""></div>
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="city" value=""></div>
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="state" value=""></div>
+                        <div class="col-md-12"><input type="text" class="mt-1 form-control" placeholder="ethnicity" value=""></div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                </div>
+
+
+
+
+                <div class="card w-75 mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Case Number: #1</h5>
+                      <p class="card-text">Date: <span id="case_id"></span></p>
+                      <p class="card-text">Doctor Name: <span id="case_doctor"></span></p>
+                      <p class="card-text">Solution : <span id="case_solution"></span></p>
+                      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+                <div class="card w-75 mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Case Number: #1</h5>
+                      <p class="card-text">Date: <span id="case_id"></span></p>
+                      <p class="card-text">Doctor Name: <span id="case_doctor"></span></p>
+                      <p class="card-text">Solution : <span id="case_solution"></span></p>
+                      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+                <div class="card w-75 mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Case Number: #1</h5>
+                      <p class="card-text">Date: <span id="case_id"></span></p>
+                      <p class="card-text">Doctor Name: <span id="case_doctor"></span></p>
+                      <p class="card-text">Solution : <span id="case_solution"></span></p>
+                      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+                <div class="card w-75 mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">Case Number: #1</h5>
+                      <p class="card-text">Date: <span id="case_id"></span></p>
+                      <p class="card-text">Doctor Name: <span id="case_doctor"></span></p>
+                      <p class="card-text">Solution : <span id="case_solution"></span></p>
+                      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+                <div class="card w-75 mt-2 mb-5">
+                    <div class="card-body">
+                      <h5 class="card-title">Case Number: #1</h5>
+                      <p class="card-text">Date: <span id="case_id"></span></p>
+                      <p class="card-text">Doctor Name: <span id="case_doctor"></span></p>
+                      <p class="card-text">Solution : <span id="case_solution"></span></p>
+                      <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+                  
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                    <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                    <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                </div>
+            </div> -->
+        </div>
+        <footer>
+            <div class="footer d-flex align-items-end">
+                <div class="footer-parts">
+                    <div class="footer-parts-h4">Get In Touch</div>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-phone"></i>&nbsp; +1 213-270-3794</a></li>
+                        <li><a href="mailto:info@helpnow@.com"><i class="fa fa-envelope"></i>&nbsp; info@helpnow.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-parts">
+                    <div class="footer-parts-h4">Extra Links</div>
+                    <ul>
+                    
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-parts">
+                    <div class="footer-parts-h4">Extra Links</div>
+                    <ul>
+                        <li><a href="#">Appointments</a></li>
+                        <li><a href="#">Find a Doctor</a></li>
+                        <li><a href="#">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-parts">
+                    <div class="footer-parts-h4">Social Links</div><br />
+                    <div style="padding-left:20px; font-size:22px;">
+                        <a href="https://www.facebook.com/freetimelearn/" target="_blank"><i class="fa fa-facebook"></i></a> &nbsp; &nbsp;
+                        <a href="https://www.linkedin.com/in/free-time-learn-07598b143/" target="_blank"><i class="fa fa-linkedin"></i></a> &nbsp; &nbsp;
+                        <a href="https://twitter.com/freetimelearn" target="_blank"><i class="fa fa-twitter"></i></a> &nbsp; &nbsp;
+                        <a href="https://plus.google.com/101612697119159092378" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                
+                </div>
+            </footer>
+    </div>
+   
+    <script>
+        $(document).ready(function() {
+            $("#userDetails").toggle();
+            $("#settings").click(function() {
+                $("#userDetails").toggle();
+            });
+            
+            fillCards();
+            
+
+        });
+        function fillCards(){
+            let patientId = $('#patientId').val();
+            
+            
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:8080");
+
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader('patientId',patientId);
+            xhr.setRequestHeader('Access-Control-Allow-Origin','*');
+            xhr.setRequestHeader('Access-Control-Allow-Headers','*');
+
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.responseText);
+
+                
+                //localStorage.setItem("userId","1");
+                //var name=localStorage.getItem("userId");
+
+            }};
+
+            xhr.send();
+        }
+        
+    </script>
+</body>
+</html>

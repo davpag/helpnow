@@ -1,0 +1,2 @@
+1   coughing    sneezing    headache    fever   2
+2   coughing    headache    chills  fever   3

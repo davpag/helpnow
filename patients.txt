@@ -1,0 +1,2 @@
+1   67  150 M   NJ  white
+2   67  151 F   NJ  white
